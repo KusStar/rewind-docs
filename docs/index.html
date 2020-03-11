@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>王二</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css">
+  <style>
+    :root {
+      --theme-color: #000;
+      --cover-max-width: 80rem;
+      --cover-heading-color: #000;
+      --cover-button-primary-background: #000;
+      --cover-button-color: #000;
+      --cover-button-border-radius: 5px;
+      --cover-button-border: 0;
+      --cover-button-padding: 0.5rem 3.5rem;
+      --cover-button-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+      --cover-button-box-shadow--hover: 0 30px 60px rgba(0, 0, 0, 0.12);
+
+      --sidebar-nav-link-transition: all var(--duration-fast) ease-in-out;
+      --sidebar-nav-link-text-decoration--active: none;
+      --sidebar-nav-link-text-decoration--hover: none;
+      --sidebar-nav-link-font-weight--active: bold;
+      --sidebar-nav-link-font-weight--hover: bold;
+    }
+  </style>
+  <style>
+    .cover h1 a {
+      transition: all .3s ease-in-out;
+    }
+    .cover h1 a:hover {
+      transform: translate3d(0px, -3px, 0px);
+    }
+    .cover .cover-main>p:last-child a{
+      margin: .375rem 1rem
+    }
+    .cover .cover-main>p:last-child a:hover{
+      transform: translate3d(0px, -1px, 0px);
+    }
+    .cover-main>p:last-child a:first-child{
+      margin-bottom: 1.5rem;
+    }
+    .sidebar>h1 {
+      transition: all var(--duration-fast) ease-in-out
+    }
+    .sidebar>h1:hover {
+      font-weight: bold;
+      transform: translate3d(0px, -3px, 0px);
+    }
+    .sidebar-toggle .sidebar-toggle-button {
+      transition: all var(--duration-fast) ease-in-out
+    }
+    .sidebar-toggle .sidebar-toggle-button:hover {
+      transform: scale(1.2);
+    }
+    .markdown-section {
+      margin-top: 2.7rem;
+    }
+    .sidebar-nav li>a[href^="#/"]:not([href*="?id="]):only-child:hover{
+      transform: translate3d(0px, -1px, 0px);
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '王二',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      coverpage: true,
+      onlyCover: true
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+</body>
+</html>
