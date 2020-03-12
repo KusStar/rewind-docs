@@ -32,3 +32,18 @@
 .sidebar-nav li>a[href^="#/"]:not([href*="?id="]):only-child:hover{
   transform: translate3d(0px, -1px, 0px);
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 25%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.cover-main {
+  animation: 2s ease-out fadeInUp
+}
