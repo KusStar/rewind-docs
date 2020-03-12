@@ -1,0 +1,34 @@
+.cover h1 a {
+  transition: all .3s ease-in-out;
+}
+.cover h1 a:hover {
+  transform: translate3d(0px, -3px, 0px);
+}
+.cover .cover-main>p:last-child a{
+  margin: .375rem 1rem
+}
+.cover .cover-main>p:last-child a:hover{
+  transform: translate3d(0px, -1px, 0px);
+}
+.cover-main>p:last-child a:first-child{
+  margin-bottom: 1.5rem;
+}
+.sidebar>h1 {
+  transition: all var(--duration-fast) ease-in-out
+}
+.sidebar>h1:hover {
+  font-weight: bold;
+  transform: translate3d(0px, -3px, 0px);
+}
+.sidebar-toggle .sidebar-toggle-button {
+  transition: all var(--duration-fast) ease-in-out
+}
+.sidebar-toggle .sidebar-toggle-button:hover {
+  transform: scale(1.2);
+}
+.markdown-section {
+  margin-top: 2.7rem;
+}
+.sidebar-nav li>a[href^="#/"]:not([href*="?id="]):only-child:hover{
+  transform: translate3d(0px, -1px, 0px);
+}
