@@ -47,3 +47,8 @@
 .cover-main {
   animation: 2s ease-out fadeInUp
 }
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
