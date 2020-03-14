@@ -44,6 +44,11 @@
   }
 }
 
+@keyframes upAndDown {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, 4%, 0); }
+  100% { transform: translate3d(0, 0%, 0); }
+}
 .cover-main {
   animation: 2s ease-out fadeInUp;
 }
@@ -55,9 +60,5 @@
 
 .home-div {
   cursor: pointer;
-  transition: all var(--duration-fast) ease-in-out;
-}
-
-.home-div:hover {
-  transform: translate3d(0, 8px, 0);
+  animation: 4s ease-in-out upAndDown infinite;
 }
