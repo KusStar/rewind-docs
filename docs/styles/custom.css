@@ -45,10 +45,19 @@
 }
 
 .cover-main {
-  animation: 2s ease-out fadeInUp
+  animation: 2s ease-out fadeInUp;
 }
 
 ::selection {
   background-color: #000;
   color: #fff;
+}
+
+.home-div {
+  cursor: pointer;
+  transition: all var(--duration-fast) ease-in-out;
+}
+
+.home-div:hover {
+  transform: translate3d(0, 8px, 0);
 }

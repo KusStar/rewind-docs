@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>王二</title>
+  <title>倒带</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -14,12 +14,45 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '王二',
+      name: '倒带',
       loadSidebar: true,
       subMaxLevel: 2,
       coverpage: true,
       homepage: './home.md'
+    };
+    // hide sidebar function
+    (function() {
+      if (isPC()) {
+        document.body.className = 'close';
+      } else {
+        document.body.className = 'ready';
+      }
+    })();
+
+    function isPC() {
+      var userAgentInfo = navigator.userAgent;
+      var Agents = ["Android", "iPhone","SymbianOS", 
+                      "Windows Phone","iPad", "iPod"];
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+          if (userAgentInfo.indexOf(Agents[v]) > 0) {
+              flag = false;
+              break;
+          }
+      }
+      return flag;
     }
+
+    // go to tutorial
+    function toTutorial() {
+      window.location.href = '#/tutorial';
+    }
+
+    // go to tutorial
+    function toTutorial() {
+      window.location.href = '#/tutorial';
+    }
+
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 </body>
