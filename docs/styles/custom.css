@@ -1,9 +1,12 @@
+/* coverpage title */
 .cover h1 a {
   transition: all .3s ease-in-out;
 }
 .cover h1 a:hover {
-  transform: translate3d(0px, -3px, 0px);
+  transform: translate3d(0px, -6px, 0px);
 }
+
+/* coverpage button */
 .cover .cover-main>p:last-child a{
   margin: .375rem 1rem
 }
@@ -13,6 +16,8 @@
 .cover-main>p:last-child a:first-child{
   margin-bottom: 1.5rem;
 }
+
+/* sidebar */
 .sidebar>h1 {
   transition: all var(--duration-fast) ease-in-out
 }
@@ -33,6 +38,23 @@
   transform: translate3d(0px, -1px, 0px);
 }
 
+/* coverpage cover container */
+.cover-main {
+  animation: 2s ease-out fadeInUp;
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
+/* home.md div */
+.home-div {
+  cursor: pointer;
+  animation: 4s ease-in-out upAndDown infinite;
+}
+
+/* keyframes */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -48,17 +70,4 @@
   0% { transform: translate3d(0, 0, 0); }
   50% { transform: translate3d(0, 4%, 0); }
   100% { transform: translate3d(0, 0%, 0); }
-}
-.cover-main {
-  animation: 2s ease-out fadeInUp;
-}
-
-::selection {
-  background-color: #000;
-  color: #fff;
-}
-
-.home-div {
-  cursor: pointer;
-  animation: 4s ease-in-out upAndDown infinite;
 }
