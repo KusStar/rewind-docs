@@ -71,3 +71,19 @@
   50% { transform: translate3d(0, 4%, 0); }
   100% { transform: translate3d(0, 0%, 0); }
 }
+
+img {
+  border-radius: 8px;
+  transition: all var(--duration-fast) ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.02)
+}
+
+.shadow {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+.shadow:hover {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12);
+}

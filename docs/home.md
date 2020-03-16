@@ -6,6 +6,8 @@
   <img
     src="https://s1.ax1x.com/2020/03/14/8MlQ2Q.jpg"
     height="500px"
+    alt="封面"
+    data-no-zoom
   />
 </div>
 

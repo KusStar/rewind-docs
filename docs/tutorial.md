@@ -5,6 +5,8 @@
 <img 
   src="https://s1.ax1x.com/2020/03/16/8YN4Re.jpg"
   height="400px"
+  alt="首页"
+  class="shadow"
 />
 
 * 首页主要有两个部分，上方 `按钮群` 及下方的 `歌单列表`。 
@@ -26,6 +28,8 @@
 <img 
   src="https://s1.ax1x.com/2020/03/16/8Ya3Bn.jpg"
   height="400px"
+  alt="网易云登入页面"
+  class="shadow"
 />
 
 大部分功能如每日推荐等需登入才能使用。
@@ -39,6 +43,8 @@
 <img 
   src="https://s1.ax1x.com/2020/03/16/8Ya1ns.jpg"
   height="400px"
+  alt="QQ音乐登入页面"
+  class="shadow"
 />
 
 可使用 `QQ 号` 或 `微信扫码` 登入。
