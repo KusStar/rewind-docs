@@ -35,7 +35,7 @@
 
 4. 修复：网易云听歌记录接口。+1 即听歌次数 加一。
 
-5. 修改：缓存目录从` ~/kuss/rewind/` 移至 `~/Android/data/com.kuss.rewind/` ，不再污染公共目录。之前有自建歌单的只需要把 `~/kuss/rewind/cache/playlist/playlist.json` 移至 `~/Android/data/com.kuss.rewind/files/playlist/` 中即可。还有注意此后卸载应用此目录也会被删除，注意备份。
+5. 修改：缓存目录移至 ~/Android/data/com.kuss.rewind/ ，不再污染公共目录。
 
 6. 修改：评论界面输入框及按钮移至顶部。
 
