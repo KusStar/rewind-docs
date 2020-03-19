@@ -1,15 +1,22 @@
-<div 
-  style="text-align: center; margin-bottom: 15rem;" 
-  onclick="toTutorial()"
+<div
   class="home-div"
 >
   <img
     src="https://s1.ax1x.com/2020/03/14/8MlQ2Q.jpg"
     height="500px"
     alt="封面"
-    data-no-zoom
   />
+  <iframe
+    src="//player.bilibili.com/player.html?aid=80906847&cid=138478165&page=1"
+    scrolling="no"
+    frameborder="no"
+    framespacing="0"
+    allowfullscreen="true"
+    id="outer-video"
+  >
+  </iframe>
 </div>
+
 
 
 ## 功能

@@ -23,20 +23,23 @@
       homepage: './home.md'
     };
     // hide sidebar function
-    (function() {
-      if (isPC()) {
+    ( function() {
+      var pc = isPC()
+      if ( pc ) {
         document.body.className = 'close';
       } else {
         document.body.className = 'ready';
       }
-    })();
+      setTimeout( () => {
+        setOuterVideoFrameStyle(pc);
+      }, 500 );
+    } )();
 
     function isPC() {
       var userAgentInfo = navigator.userAgent;
-      var Agents = ["Android", "iPhone","SymbianOS", 
-                      "Windows Phone","iPad", "iPod"];
+      var Agents = ["Android", "iPhone","SymbianOS", "Windows Phone","iPad", "iPod"];
       var flag = true;
-      for (var v = 0; v < Agents.length; v++) {
+      for ( var v = 0; v < Agents.length; v++ ) {
           if (userAgentInfo.indexOf(Agents[v]) > 0) {
               flag = false;
               break;
@@ -45,16 +48,13 @@
       return flag;
     }
 
-    // go to tutorial
-    function toTutorial() {
-      window.location.href = '#/tutorial';
+    function setOuterVideoFrameStyle( pc ) {
+      var element = document.getElementById('outer-video');
+      if ( element && ps ) {
+        element.style.width = '680px';
+        element.style.height = '480px';
+      }
     }
-
-    // go to tutorial
-    function toTutorial() {
-      window.location.href = '#/tutorial';
-    }
-
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
