@@ -57,7 +57,7 @@
 
 Bug 反馈 、应用需求 可至 酷安 - 倒带评论区 留言。
 
-联系邮箱： [2360314753@qq.com](mailto:2360314753@qq.com)
+联系邮箱： [kussssss@outlook.com](mailto:kussssss@outlook.com)
 
 本文档仓库：[KusStar/rewind_docs](https://github.com/KusStar/rewind_docs)
 
