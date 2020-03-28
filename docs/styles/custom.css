@@ -100,3 +100,7 @@ img:hover {
 .shadow:hover {
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12);
 }
+
+.mr-50 {
+  margin-right: 50px;
+}
