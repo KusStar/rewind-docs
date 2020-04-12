@@ -17,8 +17,6 @@
   </iframe>
 </div>
 
-
-
 ## 功能
 
 **网易云音乐**
@@ -62,6 +60,3 @@ Bug 反馈 、应用需求 可至 酷安 - 倒带评论区 留言。
 本文档仓库：[KusStar/rewind_docs](https://github.com/KusStar/rewind_docs)
 
 <div style="height:4rem;"></div>
-
-
-
