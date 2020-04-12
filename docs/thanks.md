@@ -32,7 +32,7 @@ Minify font seamlessly
 
 [**jaudiotagger-android**](https://github.com/hexise/jaudiotagger-android)
 
-Jaudiotagger library for Android.
+Jaudiotagger library for Android
 
 用于音乐 ID 标签嵌入
 
@@ -58,7 +58,7 @@ A declarative, efficient, and flexible JavaScript library for building user inte
 
 [**react-native**](https://github.com/facebook/react-native)
 
- A framework for building native apps with React.
+ A framework for building native apps with React
 
 [**react-native-smart-splash-screen**](https://github.com/react-native-component/react-native-smart-splash-screen/)
 
@@ -74,7 +74,7 @@ A collection of animated loading indicators for React Native
 
 [**rn-fetch-blob**](https://github.com/joltup/rn-fetch-blob)
 
-A project committed to making file access and data transfer easier, efficient for React Native developers.
+A project committed to making file access and data transfer easier, efficient for React Native developers
 
 [**UnblockNeteaseMusic**](https://github.com/nondanee/UnblockNeteaseMusic)
 
