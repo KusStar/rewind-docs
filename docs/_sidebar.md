@@ -1,6 +1,5 @@
 * [欢迎](home.md)
 * [操作指南](tutorial.md)
 * [常见问题](questions.md)
-* [开发故事](story.md)
 * [更新记录](changelog.md)
 * [鸣谢](thanks.md)
