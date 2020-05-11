@@ -6,5 +6,5 @@
 * **轻量**
 * **简洁**
 
-[下载](https://www.coolapk.com/apk/175458)
+[下载](https://rewind-dist.now.sh/rewind.apk)
 [更多](home.md)
