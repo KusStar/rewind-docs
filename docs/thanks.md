@@ -60,6 +60,10 @@ A declarative, efficient, and flexible JavaScript library for building user inte
 
  A framework for building native apps with React
 
+[**react-navigation**](https://github.com/react-navigation/react-navigation)
+
+Routing and navigation for your React Native apps
+
 [**react-native-smart-splash-screen**](https://github.com/react-native-component/react-native-smart-splash-screen/)
 
 A smart splash screen for React Native apps
@@ -75,6 +79,30 @@ A collection of animated loading indicators for React Native
 [**rn-fetch-blob**](https://github.com/joltup/rn-fetch-blob)
 
 A project committed to making file access and data transfer easier, efficient for React Native developers
+
+[**react-native-spring-scrollview**](https://github.com/bolan9999/react-native-spring-scrollview)
+
+React Native Spring ScrollView V2 is a high performance cross-platform native bounces ScrollView for React Native.(iOS & Android)
+
+[**react-native-touchable-scale**](https://github.com/kohver/react-native-touchable-scale)
+
+Like touchable opacity, but scale.
+
+[**react-native-image-picker**](https://github.com/react-native-community/react-native-image-picker)
+
+A React Native module that allows you to use native UI to select media from the device library or directly from the camera.
+
+[**react-native-music-control**](https://github.com/tanguyantoine/react-native-music-control)
+
+Display and manage media controls on lock screen and notification center for iOS and Android.
+
+[**react-native-recyclerview-list**](https://github.com/godness84/react-native-recyclerview-list)
+
+A RecyclerView implementation for React Native
+
+[**react-native-tabbed-view-pager-android**](https://github.com/madhu314/react-native-tabbed-view-pager-android)
+
+A React Native component for android view pager with tabs.
 
 [**UnblockNeteaseMusic**](https://github.com/nondanee/UnblockNeteaseMusic)
 
