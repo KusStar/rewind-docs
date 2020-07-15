@@ -6,5 +6,5 @@
 * **轻量**
 * **简洁**
 
-[下载](https://github.com/KusStar/rewind_docs/releases)
+[下载](https://github.com/KusStar/rewind-apks)
 [更多](home.md)
