@@ -84,11 +84,15 @@ A project committed to making file access and data transfer easier, efficient fo
 
 React Native Spring ScrollView V2 is a high performance cross-platform native bounces ScrollView for React Native.(iOS & Android)
 
+[**react-native-largelist**](https://github.com/bolan9999/react-native-largelist)
+
+The best large list component for React Native.
+
 [**react-native-touchable-scale**](https://github.com/kohver/react-native-touchable-scale)
 
 Like touchable opacity, but scale.
 
-[**react-native-image-picker**](https://github.com/react-native-community/react-native-image-picker)
+[**react-native-image-crop-picker**](https://github.com/ivpusic/react-native-image-crop-picker)
 
 A React Native module that allows you to use native UI to select media from the device library or directly from the camera.
 
