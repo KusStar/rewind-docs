@@ -12,9 +12,9 @@ A magical documentation site generator
 
 A delightfully simple theme system for docsify.js. Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE10+)
 
-[**zeit/docs**](https://github.com/zeit/docs/)
+[**vercel/docs**](https://github.com/vercel/docs)
 
-Documentation of ZEIT Now and other services
+Documentation of Vercel and other services
 
 ### 应用构建
 
@@ -111,6 +111,8 @@ A React Native component for android view pager with tabs.
 [**UnblockNeteaseMusic**](https://github.com/nondanee/UnblockNeteaseMusic)
 
 Revive unavailable songs for Netease Cloud Music
+
+[**lottie-react-native**](https://github.com/react-native-community/lottie-react-native)
 
 
 

@@ -22,7 +22,7 @@
 
 10. 修改：第一次启动时请求存储权限，防止闪退
 
-11. 其他：[64位、x86地址](https://github.com/KusStar/rewind_docs/releases) 
+11. 其他：[64位、x86地址](https://github.com/KusStar/rewind-apks) 
 
 
 ### 2.8.8
