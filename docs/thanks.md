@@ -114,6 +114,11 @@ Revive unavailable songs for Netease Cloud Music
 
 [**lottie-react-native**](https://github.com/react-native-community/lottie-react-native)
 
+Lottie wrapper for React Native.
+
+[**react-native-fading-edge**](https://github.com/KusStar/react-native-fading-edge)
+
+A \<FadingEdge/> component for react-native
 
 
 
