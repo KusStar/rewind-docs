@@ -8,7 +8,7 @@
 
 * [docsify-themeable](https://github.com/jhildenbiddle/docsify-themeable)
 
-* [zeit/docs](https://github.com/zeit/docs/)
+* [vercel/docs](https://github.com/vercel/docs/)
 
 ## License
 
