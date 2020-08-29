@@ -55,6 +55,6 @@
 
 联系邮箱： [kussssss@outlook.com](mailto:kussssss@outlook.com)
 
-本文档仓库：[KusStar/rewind_docs](https://github.com/KusStar/rewind_docs)
+本文档仓库：[KusStar/rewind-docs](https://github.com/KusStar/rewind-docs)
 
 <div style="height:4rem;"></div>
