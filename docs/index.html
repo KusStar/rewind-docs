@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="alternate icon" type="image/png" href="https://s1.ax1x.com/2020/04/02/GJs9PO.png" />
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css">
   <link rel="stylesheet" href="./styles/root.css">
@@ -23,35 +22,29 @@
       noEmoji: true,
       homepage: './home.md'
     };
+
+    const isMobile = ( () => {
+      const userAgentInfo = navigator.userAgent;
+      const mobileAgents = ["Android", "iPhone", "iPad"];
+      
+      return mobileAgents.some(agent => userAgentInfo.indexOf(agent) > 0)
+    } )();
+
     // hide sidebar function
-    ( function() {
-      var pc = isPC()
-      if ( pc ) {
+    ( () => {
+      if ( !isMobile ) {
         document.body.className = 'close';
       } else {
         document.body.className = 'ready';
       }
       setTimeout( () => {
-        setOuterVideoFrameStyle(pc);
+        setOuterVideoFrameStyle();
       }, 500 );
     } )();
 
-    function isPC() {
-      var userAgentInfo = navigator.userAgent;
-      var Agents = ["Android", "iPhone","SymbianOS", "Windows Phone","iPad", "iPod"];
-      var flag = true;
-      for ( var v = 0; v < Agents.length; v++ ) {
-          if (userAgentInfo.indexOf(Agents[v]) > 0) {
-              flag = false;
-              break;
-          }
-      }
-      return flag;
-    }
-
-    function setOuterVideoFrameStyle( pc ) {
-      var element = document.getElementById('outer-video');
-      if ( element && pc ) {
+    function setOuterVideoFrameStyle() {
+      const element = document.getElementById('outer-video');
+      if ( element && !isMobile ) {
         element.style.width = '680px';
         element.style.height = '480px';
       }
