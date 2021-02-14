@@ -120,6 +120,6 @@ Lottie wrapper for React Native.
 
 A \<FadingEdge/> component for react-native
 
+[**ExoPlayer**](https://github.com/google/ExoPlayer)
 
-
-
+An extensible media player for Android
