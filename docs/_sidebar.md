@@ -2,4 +2,5 @@
 * [操作指南](tutorial.md)
 * [常见问题](questions.md)
 * [更新记录](changelog.md)
+* [下载](download.md)
 * [鸣谢](thanks.md)
