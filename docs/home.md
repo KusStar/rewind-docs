@@ -2,20 +2,12 @@
   class="home-div"
 >
   <img
-    src="https://s1.ax1x.com/2020/03/14/8MlQ2Q.jpg"
-    height="500px"
+    src="https://s1.ax1x.com/2022/05/17/O5MdN4.jpg"
+    height="600px"
     alt="封面"
   />
-  <iframe
-    src="//player.bilibili.com/player.html?aid=80906847&cid=138478165&page=1"
-    scrolling="no"
-    frameborder="no"
-    framespacing="0"
-    allowfullscreen="true"
-    id="outer-video"
-  >
-  </iframe>
 </div>
+<div style="height: 8rem;"></div>
 
 ## 功能
 
