@@ -40,7 +40,7 @@
 
 
     --cover-button-box-shadow       : 0 5px 10px rgba(255, 255, 255, 0.12);
-    --cover-button-box-shadow--hover: 0 30px 60px rgba(255, 255, 255, 0.12);
+    --cover-button-box-shadow--hover: none;
 
     --link-color--hover: #888;
   }
