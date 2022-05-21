@@ -2,7 +2,7 @@
   class="home-div"
 >
   <img
-    src="https://s1.ax1x.com/2022/05/17/O5MdN4.jpg"
+    src="https://s1.ax1x.com/2022/05/21/OvF7Y8.png"
     height="600px"
     alt="封面"
   />

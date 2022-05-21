@@ -1,18 +1,60 @@
 :root {
-  --theme-color: #000;
-  --cover-max-width: 80rem;
-  --cover-heading-color: #000;
+  --theme-color                    : #000;
+  --cover-max-width                : 80rem;
+  --cover-heading-color            : #000;
   --cover-button-primary-background: #000;
-  --cover-button-color: #000;
-  --cover-button-border-radius: 5px;
-  --cover-button-border: 0;
-  --cover-button-padding: 0.5rem 3.5rem;
-  --cover-button-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  --cover-button-box-shadow--hover: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --cover-button-color             : #000;
+  --cover-button-border-radius     : 5px;
+  --cover-button-border            : 0;
+  --cover-button-padding           : 0.5rem 3.5rem;
+  --cover-button-box-shadow        : 0 5px 10px rgba(0, 0, 0, 0.12);
+  --cover-button-box-shadow--hover : 0 30px 60px rgba(0, 0, 0, 0.12);
 
-  --sidebar-nav-link-transition: all var(--duration-fast) ease-in-out;
+  --sidebar-nav-link-transition             : all var(--duration-fast) ease-in-out;
   --sidebar-nav-link-text-decoration--active: none;
-  --sidebar-nav-link-text-decoration--hover: none;
-  --sidebar-nav-link-font-weight--active: bold;
-  --sidebar-nav-link-font-weight--hover: bold;
+  --sidebar-nav-link-text-decoration--hover : none;
+  --sidebar-nav-link-font-weight--active    : bold;
+  --sidebar-nav-link-font-weight--hover     : bold;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-background-color: #000;
+    --base-color           : #fff;
+    --strong-color         : #fff;
+    --heading-color        : #fff;
+
+    --blockquote-color               : #8b949e;
+    --blockquote-background          : #1d1f21;
+    --theme-color                    : #fff;
+    --cover-heading-color            : #fff;
+    --cover-button-primary-background: #fff;
+    --cover-button-color             : #fff;
+    --cover-button-primary-color     : #000;
+    --cover-button-background        : #000;
+    --cover-button-border            : 1px solid #fff;
+
+    --cover-button-primary-background--hover: #000;
+    --cover-button-primary-color--hover     : #fff;
+
+
+    --cover-button-box-shadow       : 0 5px 10px rgba(255, 255, 255, 0.12);
+    --cover-button-box-shadow--hover: 0 30px 60px rgba(255, 255, 255, 0.12);
+
+    --link-color--hover: #888;
+  }
+
+  .cover .cover-main>p:last-child a {
+    transform : translate3d(0px, -1px, 0px);
+    color     : #888;
+    border    : 1px solid #333;
+    box-shadow: none;
+  }
+
+  .cover .cover-main>p:last-child a:hover {
+    transform: translate3d(0px, -1px, 0px);
+    color    : #fff;
+    border   : 1px solid #fff;
+  }
 }
