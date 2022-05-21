@@ -43,6 +43,8 @@
     --cover-button-box-shadow--hover: none;
 
     --link-color--hover: #888;
+
+    --code-inline-background: #222;
   }
 
   .cover .cover-main>p:last-child a {
