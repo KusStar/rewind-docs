@@ -12,9 +12,9 @@
 
   A delightfully simple theme system for docsify.js. Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE10+)
 
-- [**vercel/docs**](https://github.com/vercel/docs)
+- [**vercel**](https://vercel.com)
 
-  Documentation of Vercel and other services
+  Develop. Preview. Ship.
 
 ### 应用构建
 
