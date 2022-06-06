@@ -45,6 +45,10 @@
 
 ## 其他
 
+[![倒带公告牌](https://img.shields.io/badge/%E5%80%92%E5%B8%A6%E5%85%AC%E5%91%8A%E7%89%8C-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Rewind_News)
+&nbsp;
+[![倒带反馈群](https://img.shields.io/badge/%E5%80%92%E5%B8%A6%E5%8F%8D%E9%A6%88%E7%BE%A4-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&link)](https://t.me/Rewind_Group)
+
 联系邮箱： [kussssss@outlook.com](mailto:kussssss@outlook.com)
 
 本文档仓库：[KusStar/rewind-docs](https://github.com/KusStar/rewind-docs)
