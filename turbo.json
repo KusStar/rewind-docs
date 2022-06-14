@@ -1,0 +1,11 @@
+{
+  "npmClient": "pnpm",
+  "pipeline": {
+    "build": {
+
+    },
+    "dev": {
+      "cache": false
+    }
+  }
+}

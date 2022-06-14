@@ -1,0 +1,13 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "esbuild": "^0.14.43",
+    "turbo": "^1.2.16"
+  }
+}
