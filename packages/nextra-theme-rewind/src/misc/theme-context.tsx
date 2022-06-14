@@ -3,10 +3,10 @@ export default {
   sidebar: true,
   toc: true,
   pagination: true,
-  footer: true,
+  footer: false,
   layout: 'default',
   typesetting: 'default',
-  breadcrumb: true
+  breadcrumb: false
 } as PageTheme
 
 export type PageTheme = {

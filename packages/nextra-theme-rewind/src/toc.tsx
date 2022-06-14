@@ -208,7 +208,7 @@ export default function ToC({
       <div className="nextra-toc-content overflow-y-auto pr-4 -mr-4 sticky max-h-[calc(100vh-4rem-env(safe-area-inset-bottom))] top-16 pt-8">
         {hasHeadings && headings ? (
           <ul>
-            <p className="font-semibold tracking-tight mb-4">On This Page</p>
+            <p className="font-semibold tracking-tight mb-4">目录</p>
             {headings.map(heading => {
               const text = getHeadingText(heading)
               const slug = slugger.slug(text)

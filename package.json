@@ -8,6 +8,7 @@
   "devDependencies": {
     "concurrently": "^7.2.1",
     "esbuild": "^0.14.43",
+    "next": "^12.1.6",
     "turbo": "^1.2.16"
   }
 }

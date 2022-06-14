@@ -35,8 +35,7 @@
     "types": "tsc -p tsconfig.types.json",
     "dev:layout": "node scripts/dev.js",
     "dev:tailwind": "cross-env TAILWIND_MODE=watch pnpm postcss src/styles.css -o style.css --watch",
-    "prepublishOnly": "rm -rf dist && pnpm build",
-    "test": "vitest --run"
+    "prepublishOnly": "rm -rf dist && pnpm build"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.1",
@@ -48,7 +47,7 @@
     "github-slugger": "^1.4.0",
     "intersection-observer": "^0.12.0",
     "match-sorter": "^4.2.0",
-    "next-themes": "^0.2.0-beta.2",
+    "next-themes": "^0.2.0",
     "parse-git-url": "^1.0.1",
     "scroll-into-view-if-needed": "^2.2.29",
     "title": "^3.4.2"

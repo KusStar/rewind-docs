@@ -845,6 +845,10 @@ table tr td {
   display: none;
 }
 
+::selection {
+  @apply bg-primary-1000;
+}
+
 :root {
   --shiki-color-text: #414141;
   --shiki-color-background: transparent;
@@ -859,7 +863,7 @@ table tr td {
   --shiki-token-link: #22863a;
   --nextra-shiki-deleted: #f00;
   --nextra-shiki-inserted: #f00;
-  --nextra-primary-hue: 212deg;
+  --nextra-primary-hue: 142deg;
 }
 
 .dark {
@@ -873,5 +877,5 @@ table tr td {
   --shiki-token-string-expression: #4bb74a;
   --shiki-token-punctuation: #bbbbbb;
   --shiki-token-link: #ffab70;
-  --nextra-primary-hue: 204deg;
+  --nextra-primary-hue: 145deg;
 }

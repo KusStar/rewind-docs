@@ -2,12 +2,13 @@ const colors = require('tailwindcss/colors')
 
 const makePrimaryColor =
   l =>
-  ({ opacityValue }) => {
-    if (opacityValue === undefined) {
-      return `hsl(var(--nextra-primary-hue) 100% ${l}%)`
+    ({ opacityValue, ...rest }) => {
+      console.log(rest)
+      if (opacityValue === undefined) {
+        return `hsl(0 0% ${l - 10}%)`
+      }
+      return `hsl(0 0% ${l - 10}% / ${opacityValue})`
     }
-    return `hsl(var(--nextra-primary-hue) 100% ${l}% / ${opacityValue})`
-  }
 
 module.exports = {
   content: ['./src/**/*.{js,css,tsx}'],
@@ -44,7 +45,7 @@ module.exports = {
       neutral: colors.neutral,
       red: colors.red,
       orange: colors.orange,
-	  blue: colors.blue,
+      blue: colors.blue,
       yellow: colors.yellow,
       primary: {
         50: makePrimaryColor(97),
@@ -64,6 +65,10 @@ module.exports = {
     extend: {
       colors: {
         dark: '#000'
+      },
+      boxShadow: {
+        'btn': '0 5px 10px rgba(0, 0, 0, 0.12)',
+        'btn-hover': '0 30px 60px rgba(0, 0, 0, 0.12)',
       }
     }
   },

@@ -24,19 +24,18 @@ const Logo = ({ size, ...props }) => (
 export default {
   projectLink: 'https://github.com/kusstar/rewind-docs', // GitHub link in the navbar
   docsRepositoryBase: 'https://github.com/kusstar/rewind-docs/blob/master', // base URL for the docs repository
-  titleSuffix: ' – Rewind',
+  titleSuffix: ' – 倒带',
   floatTOC: true,
   nextLinks: true,
   prevLinks: true,
   search: true,
   unstable_flexsearch: true,
   darkMode: true,
-  footer: true,
   nextThemes: {
-    defaultTheme: 'system'
+    defaultTheme: 'system',
   },
-  footerText: `MIT ${new Date().getFullYear()} © NCUHOME.`,
-  footerEditLink: `Edit this page on GitHub`,
+  footerEditLink: false,
+  searchPlaceholder: '搜索……',
   logo: (
     <>
       <Logo size={32} style={{

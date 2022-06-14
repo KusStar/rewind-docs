@@ -1,3 +1,5 @@
+export { default as Landing } from './components/landing';
+
 import React, { useMemo, useState } from 'react'
 import { useRouter } from 'next/router'
 import 'focus-visible'
@@ -68,16 +70,16 @@ const Body: React.FC<BodyProps> = ({
             <div className="text-xs text-right block text-gray-500 mt-12 mb-8 dark:text-gray-400 pointer-default">
               {typeof config.gitTimestamp === 'string'
                 ? config.gitTimestamp +
-                  ' ' +
-                  date.toLocaleDateString(locale, {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })
+                ' ' +
+                date.toLocaleDateString(locale, {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })
                 : renderComponent(config.gitTimestamp, {
-                    timestamp: date,
-                    locale
-                  })}
+                  timestamp: date,
+                  locale
+                })}
             </div>
           ) : (
             <div className="mt-16" />
@@ -104,16 +106,16 @@ const Body: React.FC<BodyProps> = ({
               <div className="text-xs text-right block text-gray-500 mt-12 mb-8 dark:text-gray-400 pointer-default">
                 {typeof config.gitTimestamp === 'string'
                   ? config.gitTimestamp +
-                    ' ' +
-                    date.toLocaleDateString(locale, {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })
+                  ' ' +
+                  date.toLocaleDateString(locale, {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })
                   : renderComponent(config.gitTimestamp, {
-                      timestamp: date,
-                      locale
-                    })}
+                    timestamp: date,
+                    locale
+                  })}
               </div>
             ) : (
               <div className="mt-16" />
@@ -170,6 +172,7 @@ const Content: React.FC<LayoutProps> = ({
   }, [config.i18n, locale])
 
   const [menu, setMenu] = useState(false)
+
   const themeContext = { ...activeThemeContext, ...meta }
 
   const hideSidebar = !themeContext.sidebar || themeContext.layout === 'raw'
@@ -212,8 +215,8 @@ const Content: React.FC<LayoutProps> = ({
                   includePlaceholder={themeContext.layout === 'default'}
                 />
                 {activeType === 'page' ||
-                hideToc ||
-                themeContext.layout !== 'default' ? (
+                  hideToc ||
+                  themeContext.layout !== 'default' ? (
                   themeContext.layout === 'full' ? null : (
                     <div className="nextra-toc w-64 hidden xl:block text-sm px-4 order-last flex-shrink-0" />
                   )
