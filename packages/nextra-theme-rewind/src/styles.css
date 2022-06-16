@@ -846,7 +846,8 @@ table tr td {
 }
 
 ::selection {
-  @apply bg-primary-1000;
+  background: var(--selection-bg);
+  color: var(--selection-color);
 }
 
 :root {
@@ -864,6 +865,9 @@ table tr td {
   --nextra-shiki-deleted: #f00;
   --nextra-shiki-inserted: #f00;
   --nextra-primary-hue: 142deg;
+
+  --selection-bg: #000;
+  --selection-color: #fff;
 }
 
 .dark {
@@ -878,4 +882,7 @@ table tr td {
   --shiki-token-punctuation: #bbbbbb;
   --shiki-token-link: #ffab70;
   --nextra-primary-hue: 145deg;
+
+  --selection-bg: #fff;
+  --selection-color: #000;
 }
