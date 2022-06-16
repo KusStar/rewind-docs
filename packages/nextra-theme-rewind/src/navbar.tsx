@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
+import { useTheme } from 'next-themes'
 import renderComponent from './utils/render-component'
 import { getFSRoute } from './utils/get-fs-route'
 import useMenuContext from './utils/menu-context'
@@ -14,6 +14,8 @@ import GitHubIcon from './icons/github'
 import DiscordIcon from './icons/discord'
 import { Item, PageItem } from './utils/normalize-pages'
 
+import Sun from './icons/sun'
+import Moon from './icons/moon'
 interface NavBarProps {
   isRTL?: boolean | null
   flatDirectories: Item[]
@@ -25,6 +27,9 @@ export default function Navbar({ flatDirectories, items }: NavBarProps) {
   const { locale, asPath } = useRouter()
   const activeRoute = getFSRoute(asPath, locale)
   const { menu, setMenu } = useMenuContext()
+
+  const { theme, setTheme, systemTheme } = useTheme()
+  const renderedTheme = theme === 'system' ? systemTheme : theme
 
   const bannerKey = config.bannerKey || 'nextra-banner'
 
@@ -136,6 +141,22 @@ export default function Navbar({ flatDirectories, items }: NavBarProps) {
                 ) : null)}
             </div>
           </div>
+
+
+          {true ? (
+            <div
+              className="text-current p-2 cursor-pointer"
+              onClick={() => setTheme(renderedTheme === 'dark' ? 'light' : 'dark')}
+            >
+              {config.projectLinkIcon ? (
+                renderComponent(config.projectLinkIcon, { locale })
+              ) : (
+                <React.Fragment>
+                  {renderedTheme === 'dark' ? <Moon /> : <Sun />}
+                </React.Fragment>
+              )}
+            </div>
+          ) : null}
 
           {config.projectLink || config.github ? (
             <a
