@@ -10,6 +10,7 @@
     "type": "page",
     "hidden": true,
     "theme": {
+      "gitTimestamp": false,
       "navbar": false
     }
   }

@@ -2,52 +2,70 @@ import React, { FC } from 'react'
 import { useRouter, NextRouter } from "next/router";
 import cn from 'classnames'
 
-interface Props {
-  onLeft: (router: NextRouter) => void;
-  onRight: (router: NextRouter) => void;
+
+interface Button {
+  content: React.ReactElement;
+  type?: 'default' | 'ghost';
+  onClick: (router: NextRouter) => void
 }
 
-const BtnBase = [
-  "py-2.5 px-14 rounded transition duration-300 dark:border/0", 
+interface Props {
+  title: string
+  subtitle: string
+  keywords?: string[]
+  buttons?: Button[]
+}
+
+const BTN_BASE = [
+  "py-2.5 px-14 rounded transition duration-300 dark:border/0",
   'shadow-btn hover:shadow-btn-hover',
 ]
 
+const BTN_DEFAULT = [
+  'dark:bg-white dark:text-black dark:hover:bg-transparent dark:hover:text-white dark:border',
+  'bg-black text-white'
+]
+
+const BTN_GHOST = [
+  'dark:border dark:opacity-60 dark:hover:opacity-100',
+]
+
 const Landing: FC<Props> = ({
-  onLeft,
-  onRight
+  buttons,
+  title,
+  subtitle,
+  keywords
 }) => {
   const router = useRouter();
   return (
     <div className='h-full flex flex-col items-center justify-center'>
       <div className='mb-8 text-center'>
-        <div className='text-4xl font-bold mb-6'>倒带</div>
-        <div className='text-xl mb-6'>简单的音乐播放器</div>
-        <div className='flex flex-col'>
-          <span className='font-bold'>轻量</span>
-          <span className='font-bold'>简洁</span>
+        <div className='text-4xl font-bold mb-6'>{title}</div>
+        <div className='text-xl mb-6'>{subtitle}</div>
+        {keywords && keywords.length > 0 &&
+          <div className='flex flex-col'>
+            {keywords.map((keyword, i) => (
+              <span className='font-bold' key={i}>{keyword}</span>
+            ))}
+          </div>
+        }
+      </div>
+      {buttons && buttons.length > 0 && (
+        <div className='flex space-x-8'>
+          {buttons.map((btn, i) => (
+            <button
+              key={i}
+              onClick={() => btn.onClick(router)}
+              className={cn(
+                ...BTN_BASE,
+                ...(btn.type === 'ghost' ? BTN_GHOST : BTN_DEFAULT)
+              )}
+            >
+              {btn.content}
+            </button>
+          ))}
         </div>
-      </div>
-      <div className='flex space-x-8'>
-        <button
-          onClick={() => onRight(router)}
-          className={cn(
-            ...BtnBase,
-            'dark:bg-white dark:text-black dark:hover:bg-transparent dark:hover:text-white dark:border',
-            'bg-black text-white'
-          )}
-        >
-          下载
-        </button>
-        <button
-          onClick={() => onLeft(router)}
-          className={cn(
-            ...BtnBase,
-            'dark:border dark:opacity-60 dark:hover:opacity-100',
-          )}
-        >
-          更多
-        </button>
-      </div>
+      )}
     </div>
   );
 }

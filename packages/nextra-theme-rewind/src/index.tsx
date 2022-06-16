@@ -56,7 +56,8 @@ const Body: React.FC<BodyProps> = ({
   timestamp,
   children
 }) => {
-  const config = useConfig()
+  const _config = useConfig()
+  const config = { ..._config, ...themeContext }
   const { locale } = useRouter()
   const date = timestamp ? new Date(timestamp) : null
 

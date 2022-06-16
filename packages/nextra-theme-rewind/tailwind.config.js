@@ -2,8 +2,7 @@ const colors = require('tailwindcss/colors')
 
 const makePrimaryColor =
   l =>
-    ({ opacityValue, ...rest }) => {
-      console.log(rest)
+    ({ opacityValue }) => {
       if (opacityValue === undefined) {
         return `hsl(0 0% ${l - 10}%)`
       }
