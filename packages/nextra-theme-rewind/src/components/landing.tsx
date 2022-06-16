@@ -27,7 +27,7 @@ const BTN_DEFAULT = [
 ]
 
 const BTN_GHOST = [
-  'dark:border dark:opacity-60 dark:hover:opacity-100',
+  'dark:border dark:opacity-40 dark:hover:opacity-100',
 ]
 
 const Landing: FC<Props> = ({

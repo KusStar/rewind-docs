@@ -19,7 +19,7 @@ const defaultTheme = {
   footer: true,
   footerText: `MIT ${new Date().getFullYear()} © Nextra.`,
   footerEditLink: 'Edit this page',
-  gitTimestamp: 'Last updated on',
+  gitTimestamp: '最近更新于',
   logo: (
     <React.Fragment>
       <span className="mr-2 font-extrabold hidden md:inline">Nextra</span>

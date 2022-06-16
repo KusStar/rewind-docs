@@ -4,9 +4,9 @@ const makePrimaryColor =
   l =>
     ({ opacityValue }) => {
       if (opacityValue === undefined) {
-        return `hsl(0 0% ${l - 10}%)`
+        return `hsl(100% 100% ${l}%)`
       }
-      return `hsl(0 0% ${l - 10}% / ${opacityValue})`
+      return `hsl(100% 100% ${l}% / ${opacityValue})`
     }
 
 module.exports = {
