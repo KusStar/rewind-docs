@@ -1,0 +1,17 @@
+{
+  "home": "欢迎",
+  "tutorial": "操作指南",
+  "questions": "常见问题",
+  "changelog": "更新记录",
+  "download": "下载",
+  "thanks": "鸣谢",
+  "index": {
+    "title": "倒带",
+    "type": "page",
+    "hidden": true,
+    "theme": {
+      "gitTimestamp": false,
+      "navbar": false
+    }
+  }
+}
