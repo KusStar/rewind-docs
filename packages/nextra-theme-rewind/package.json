@@ -44,11 +44,13 @@
     "classnames": "^2.2.6",
     "flexsearch": "^0.7.21",
     "focus-visible": "^5.1.0",
+    "framer-motion": "^6.3.11",
     "github-slugger": "^1.4.0",
     "intersection-observer": "^0.12.0",
     "match-sorter": "^4.2.0",
     "next-themes": "^0.2.0",
     "parse-git-url": "^1.0.1",
+    "react-intersection-observer": "^9.3.3",
     "scroll-into-view-if-needed": "^2.2.29",
     "title": "^3.4.2"
   },
