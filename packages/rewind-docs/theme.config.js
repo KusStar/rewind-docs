@@ -40,15 +40,16 @@ export default {
     <>
       <Logo size={32} style={{
         marginTop: 6
-      }}/>
+      }} />
       <span>倒带</span>
     </>
   ),
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Mincu" />
-      <meta name="og:title" content="Mincu" />
+      <meta name="description" content="Rewind" />
+      <meta name="og:title" content="Rewind" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg"></link>
     </>
   ),
 }

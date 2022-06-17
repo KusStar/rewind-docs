@@ -4,15 +4,19 @@ importers:
 
   .:
     specifiers:
+      '@types/node': ^18.0.0
       concurrently: ^7.2.1
       esbuild: ^0.14.43
       next: ^12.1.6
       turbo: ^1.2.16
+      typescript: ^4.7.3
     devDependencies:
+      '@types/node': 18.0.0
       concurrently: 7.2.1
       esbuild: 0.14.43
       next: 12.1.6
       turbo: 1.2.16
+      typescript: 4.7.3
 
   packages/nextra-theme-rewind:
     specifiers:
@@ -415,6 +419,10 @@ packages:
 
   /@types/ms/0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
+
+  /@types/node/18.0.0:
+    resolution: {integrity: sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==}
+    dev: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -3197,6 +3205,12 @@ packages:
       turbo-windows-32: 1.2.16
       turbo-windows-64: 1.2.16
       turbo-windows-arm64: 1.2.16
+    dev: true
+
+  /typescript/4.7.3:
+    resolution: {integrity: sha512-WOkT3XYvrpXx4vMMqlD+8R8R37fZkjyLGlxavMc4iB8lrl8L0DeTcHbYgw/v0N/z9wAFsgBhcsF0ruoySS22mA==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /unified/10.1.2:
