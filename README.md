@@ -4,11 +4,21 @@
 
 ## Thanks
 
-* [docsify](https://github.com/docsifyjs/docsify)
+- [**nextra**](https://github.com/shuding/nextra/tree/core)
 
-* [docsify-themeable](https://github.com/jhildenbiddle/docsify-themeable)
+  The Next.js Static Site Generator
 
-* [vercel/docs](https://github.com/vercel/docs/)
+- [**nextra-theme-docs**](https://github.com/shuding/nextra/tree/core/packages/nextra-theme-docs)
+
+  A documentation site theme for Nextra.
+
+- [**vercel**](https://vercel.com)
+
+  Develop. Preview. Ship.
+
+- [**nextra-theme-rewind**](https://github.com/KusStar/rewind-docs/tree/master/packages/nextra-theme-rewind)
+
+  Nextra theme, built for https://rewindapp.vercel.app/
 
 ## License
 
