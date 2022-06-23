@@ -73,7 +73,6 @@ importers:
 
   packages/rewind-docs:
     specifiers:
-      imagesloaded: ^5.0.0
       locomotive-scroll: ^4.1.4
       next: ^12.1.6
       nextra: 2.0.0-alpha.56
@@ -81,7 +80,6 @@ importers:
       react: ^18.1.0
       react-dom: ^18.1.0
     dependencies:
-      imagesloaded: 5.0.0
       locomotive-scroll: 4.1.4
       next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
       nextra: 2.0.0-alpha.56_react@18.1.0
@@ -1231,10 +1229,6 @@ packages:
   /estree-walker/3.0.1:
     resolution: {integrity: sha512-woY0RUD87WzMBUiZLx8NsYr23N5BKsOMZHhu2hoNRVh6NXGfoiT1KOL8G3UHlJAnEDGmfa5ubNA/AacfG+Kb0g==}
 
-  /ev-emitter/2.1.2:
-    resolution: {integrity: sha512-jQ5Ql18hdCQ4qS+RCrbLfz1n+Pags27q5TwMKvZyhp5hh2UULUYZUy1keqj6k6SYsdqIYjnmz7xyyEY0V67B8Q==}
-    dev: false
-
   /execa/0.8.0:
     resolution: {integrity: sha512-zDWS+Rb1E8BlqqhALSt9kUhss8Qq4nN3iof3gsOdyINksElaPyNBtKUMTR62qhvgVWR0CqCX7sdnKe4MnUbFEA==}
     engines: {node: '>=4'}
@@ -1439,12 +1433,6 @@ packages:
     resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
     engines: {node: '>= 4'}
     dev: true
-
-  /imagesloaded/5.0.0:
-    resolution: {integrity: sha512-/0JGSubc1MTCoDKVmonLHgbifBWHdyLkun+R/151E1c5n79hiSxcd7cB7mPXFgojYu8xnRZv7GYxzKoxW8BetQ==}
-    dependencies:
-      ev-emitter: 2.1.2
-    dev: false
 
   /inline-style-parser/0.1.1:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}

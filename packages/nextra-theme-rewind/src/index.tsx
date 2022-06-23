@@ -69,8 +69,10 @@ const Body: React.FC<BodyProps> = ({
       {themeContext.layout === 'full' ? (
         <article className={
           cn(
-            "nextra-body full relative justify-center",
-            activeType != 'page' ? ' overflow-x-hidden pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]' : ''
+            "nextra-body full relative justify-center overflow-x-hidden",
+            {
+              'pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]': activeType != 'page'
+            }
           )
         }>
           <MDXTheme>{children}</MDXTheme>

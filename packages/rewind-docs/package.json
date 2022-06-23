@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/KusStar/rewind-docs#readme",
   "dependencies": {
-    "imagesloaded": "^5.0.0",
     "locomotive-scroll": "^4.1.4",
     "next": "^12.1.6",
     "nextra": "2.0.0-alpha.56",
