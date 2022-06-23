@@ -8,6 +8,7 @@
       "outputs": [
         "dist/**/*.js",
         "dist/**/*.css",
+        "dist/**/*.d.ts",
         ".next/**",
         "style.css",
         "index.js",
