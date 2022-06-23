@@ -70,7 +70,7 @@ const Scroll = () => {
             onClick: (router) => router.push("/home"),
           },
         ]}
-        coverImgUrl={"https://s1.ax1x.com/2022/05/21/OvF7Y8.png"}
+        coverImgUrl={"https://s1.ax1x.com/2022/06/23/jCsakQ.png"}
       />
       <div
         style={{
@@ -140,7 +140,7 @@ const Scroll = () => {
           data-scroll data-scroll-speed="2"
         >
           <img
-            src={"https://s1.ax1x.com/2022/05/21/OvF7Y8.png"}
+            src={"https://s1.ax1x.com/2022/06/23/jCsakQ.png"}
             width="600px"
             alt="封面"
           />
