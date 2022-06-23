@@ -272,7 +272,7 @@ export default function normalizePages({
     if (normalizedChildren) {
       switch (type) {
         case 'page':
-          // @ts-expect-error normalizedChildren === true
+          // @ts-ignore
           pageItem.children.push(...normalizedChildren.pageDirectories)
           docsDirectories.push(...normalizedChildren.docsDirectories)
 

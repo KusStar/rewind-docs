@@ -5,11 +5,11 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true,
     "moduleResolution": "node",
     "jsx": "react",
     "outDir": "dist"
   },
-  "files": ["src/bleed.tsx", "src/callout.tsx", "src/types.ts"]
+  "include": ["src"]
 }

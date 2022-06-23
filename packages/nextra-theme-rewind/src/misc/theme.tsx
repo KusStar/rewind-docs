@@ -255,6 +255,7 @@ const findSummary = (children: React.ReactNode) => {
         summary = summary || result[0]
         c = React.cloneElement(child, {
           ...child.props,
+          // @ts-ignore
           children: result[1]?.length ? result[1] : undefined,
           key: index
         })
@@ -329,6 +330,7 @@ const getComponents = (context: { index: number }) => ({
 export const MDXTheme: React.FC<{}> = ({ children }) => {
   return (
     <MDXProvider components={getComponents({ index: 0 }) as any}>
+      {/* @ts-ignore */}
       {children}
     </MDXProvider>
   )
