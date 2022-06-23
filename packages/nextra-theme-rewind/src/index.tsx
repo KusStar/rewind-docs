@@ -47,6 +47,7 @@ interface BodyProps {
   toc?: React.ReactNode
   timestamp?: number
   navLinks: React.ReactNode
+  activeType?: string
 }
 
 const Body: React.FC<BodyProps> = ({
@@ -54,7 +55,8 @@ const Body: React.FC<BodyProps> = ({
   breadcrumb,
   navLinks,
   timestamp,
-  children
+  children,
+  activeType
 }) => {
   const _config = useConfig()
   const config = { ..._config, ...themeContext }
@@ -65,7 +67,12 @@ const Body: React.FC<BodyProps> = ({
     <React.Fragment>
       <SkipNavContent />
       {themeContext.layout === 'full' ? (
-        <article className="nextra-body full relative justify-center overflow-x-hidden pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
+        <article className={
+          cn(
+            "nextra-body full relative justify-center",
+            activeType != 'page' ? ' overflow-x-hidden pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]' : ''
+          )
+        }>
           <MDXTheme>{children}</MDXTheme>
           {date && config.gitTimestamp ? (
             <div className="text-xs text-right block text-gray-500 mt-12 mb-8 dark:text-gray-400 pointer-default">
@@ -244,6 +251,7 @@ const Content: React.FC<LayoutProps> = ({
                     ) : null
                   }
                   timestamp={timestamp}
+                  activeType={activeType}
                 >
                   {children}
                 </Body>
