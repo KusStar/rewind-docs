@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 // Thanks: https://stackoverflow.com/a/72700035
-export const useUrlHash = (initialValue) => {
+export const useUrlHash = (initialValue?: any) => {
   const router = useRouter()
   const [hash, setHash] = useState(initialValue)
 

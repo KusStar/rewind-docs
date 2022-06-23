@@ -11,7 +11,9 @@
     "hidden": true,
     "theme": {
       "gitTimestamp": false,
-      "navbar": false
+      "navbar": false,
+      "toc": false,
+      "layout": "full"
     }
   }
 }

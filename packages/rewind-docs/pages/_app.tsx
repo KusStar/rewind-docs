@@ -1,5 +1,6 @@
 import "nextra-theme-rewind/style.css";
 import '../styles/custom.css'
+import '../styles/base.css'
 
 import { useEffect } from "react";
 import { useRouter } from "next/router";

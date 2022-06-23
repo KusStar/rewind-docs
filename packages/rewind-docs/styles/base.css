@@ -1,0 +1,124 @@
+/* 
+Based on https://github.com/codrops/TileScroll/blob/main/src/css/base.css
+Thanks https://github.com/codrops/TileScroll
+
+MIT License
+
+Copyright (c) 2009 - 2020 [Codrops](https://tympanus.net/codrops)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+.content {
+	padding: 3rem;
+	min-height: 90vh;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-between;
+}
+
+.tiles {
+	--tiles-height: 52vw;
+	height: var(--tiles-height);
+	position: relative;
+	overflow: hidden;
+}
+
+.tiles__wrap {
+	width: 150%;
+	--tileswrap-height: var(--tiles-height);
+	height: var(--tileswrap-height);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%,-50%, 0);
+}
+
+.tiles--rotated .tiles__wrap {
+	--tileswrap-height: calc(var(--tiles-height) * 1.8);
+	transform: translate3d(-50%,-50%, 0) rotate(22.5deg);
+}
+
+.tiles__line {
+	display: flex;
+}
+
+.tiles__line-img {
+	--tile-margin: 2vw;
+	flex: none;
+	width: calc(16.6666% - var(--tile-margin) * 2);
+	height: calc( var(--tileswrap-height) / 3 - (3 * var(--tile-margin) / 2));
+	margin: var(--tile-margin);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.tiles--rotated .tiles__line-img {
+	--tile-margin: 1vw;
+	width: 15vw;
+	height: 15vw;
+}
+
+.backtop {
+	align-self: center;
+	margin: auto 0;
+	font-size: 6vw;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.backtop::after {
+	content: "\2934";
+	font-size: 3vw;
+	vertical-align: top;
+	margin-left: 1rem;
+}
+
+/*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+	overflow: hidden; 
+}
+  
+html.has-scroll-dragging {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+}
+  
+.has-scroll-smooth body {
+	overflow: hidden; 
+}
+  
+.has-scroll-smooth [data-scroll-container] {
+	min-height: 100vh; 
+}
+
+@media screen and (min-width: 53em) {
+	.frame {
+		display: grid;
+		align-content: space-between;
+		width: 100%;
+		grid-gap: 5vw;
+		grid-template-columns: auto auto auto 1fr;
+		grid-template-areas: 'title title links demos';
+	}
+}

@@ -20,6 +20,10 @@
 
   Nextra theme, built for https://rewindapp.vercel.app/
 
+- [**codrops/TileScroll**](https://github.com/codrops/TileScroll)
+
+  Scroll animations for image grids using Locomotive Scroll
+
 ## License
 
 * [MIT](LICENSE)
