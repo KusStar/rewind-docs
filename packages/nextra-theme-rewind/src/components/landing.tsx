@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { useRouter, NextRouter } from "next/router";
-import cn from 'classnames'
+import cn from 'clsx'
 
 interface Button {
   content: React.ReactNode;

@@ -1,6 +1,6 @@
 import React, { useMemo, useCallback, useRef, useState, useEffect } from 'react'
 import matchSorter from 'match-sorter'
-import cn from 'classnames'
+import cn from 'clsx'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import type { MouseEventHandler } from 'react'

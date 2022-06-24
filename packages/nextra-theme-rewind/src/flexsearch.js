@@ -7,7 +7,7 @@ import React, {
   Fragment
 } from 'react'
 import Router, { useRouter } from 'next/router'
-import cn from 'classnames'
+import cn from 'clsx'
 import Link from 'next/link'
 import FlexSearch from 'flexsearch'
 import { Transition } from '@headlessui/react'

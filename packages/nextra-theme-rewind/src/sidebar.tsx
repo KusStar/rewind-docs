@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import cn from 'classnames'
+import cn from 'clsx'
 import Slugger from 'github-slugger'
 import { useRouter } from 'next/router'
 import Link from 'next/link'

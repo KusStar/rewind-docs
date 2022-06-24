@@ -1,5 +1,5 @@
 import React from 'react'
-import cn from 'classnames'
+import cn from 'clsx'
 import { Listbox, Transition } from '@headlessui/react'
 import Check from './icons/check'
 

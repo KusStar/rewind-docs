@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import cn from 'classnames'
+import cn from 'clsx'
 
 import ArrowRight from './icons/arrow-right'
 

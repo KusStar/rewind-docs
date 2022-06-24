@@ -1,5 +1,5 @@
 import React from 'react'
-import cn from 'classnames'
+import cn from 'clsx'
 import Slugger from 'github-slugger'
 import { Heading } from 'nextra'
 import parseGitUrl from 'parse-git-url'
