@@ -96,7 +96,7 @@ function FolderImpl({ item, anchors }: FolderProps) {
 
   return (
     <li className={cn({ open, active })}>
-      {item.withIndexPage ? <Link href={item.route}>{link}</Link> : link}
+      {item.withIndexPage ? <Link href={item.route} legacyBehavior>{link}</Link> : link}
       <Collapse open={open}>
         {Array.isArray(item.children) && (
           <Menu
@@ -108,7 +108,7 @@ function FolderImpl({ item, anchors }: FolderProps) {
         )}
       </Collapse>
     </li>
-  )
+  );
 }
 
 interface SeparatorProps {
@@ -173,17 +173,17 @@ function File({ item, anchors, topLevel }: FileProps) {
 
       return (
         <li className={active ? 'active' : ''}>
-          <Link href={(item as PageItem).href || item.route}>
-            <a
-              {...((item as PageItem).newWindow
-                ? { target: '_blank', rel: 'noopener noreferrer' }
-                : {})}
-              onClick={() => {
-                setMenu(false)
-              }}
-            >
-              {title}
-            </a>
+          <Link
+            href={(item as PageItem).href || item.route}
+            {...((item as PageItem).newWindow
+              ? { target: '_blank', rel: 'noopener noreferrer' }
+              : {})}
+            onClick={() => {
+              setMenu(false)
+            }}>
+
+            {title}
+
           </Link>
           <ul>
             {anchors.map((_, i) => {
@@ -210,26 +210,26 @@ function File({ item, anchors, topLevel }: FileProps) {
             })}
           </ul>
         </li>
-      )
+      );
     }
   }
 
   return (
     <li className={active ? 'active' : ''}>
-      <Link href={(item as PageItem).href || item.route}>
-        <a
-          {...((item as PageItem).newWindow
-            ? { target: '_blank', rel: 'noopener noreferrer' }
-            : {})}
-          onClick={() => {
-            setMenu(false)
-          }}
-        >
-          {title}
-        </a>
+      <Link
+        href={(item as PageItem).href || item.route}
+        {...((item as PageItem).newWindow
+          ? { target: '_blank', rel: 'noopener noreferrer' }
+          : {})}
+        onClick={() => {
+          setMenu(false)
+        }}>
+
+        {title}
+
       </Link>
     </li>
-  )
+  );
 }
 
 interface MenuProps {

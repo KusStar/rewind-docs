@@ -19,17 +19,21 @@ const Item = ({ title, active, href, onMouseOver, search }: ItemProps) => {
   const highlight = title.toLowerCase().indexOf(search.toLowerCase())
   return (
     <li className={cn('p-2', { active })}>
-      <Link href={href} passHref>
-        <a className="block no-underline" onMouseOver={onMouseOver}>
-          {title.substring(0, highlight)}
-          <span className="highlight">
-            {title.substring(highlight, highlight + search.length)}
-          </span>
-          {title.substring(highlight + search.length)}
-        </a>
+      <Link
+        href={href}
+        passHref
+        className="block no-underline"
+        onMouseOver={onMouseOver}>
+
+        {title.substring(0, highlight)}
+        <span className="highlight">
+          {title.substring(highlight, highlight + search.length)}
+        </span>
+        {title.substring(highlight + search.length)}
+
       </Link>
     </li>
-  )
+  );
 }
 
 const UP = true

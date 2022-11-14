@@ -216,12 +216,12 @@ const A = ({
     )
   }
   return props.href ? (
-    <Link href={props.href}>
-      <a {...props}>{children}</a>
+    <Link href={props.href} {...props}>
+      {children}
     </Link>
   ) : (
     <></>
-  )
+  );
 }
 
 const Table = ({ children }: { children?: React.ReactNode }) => {

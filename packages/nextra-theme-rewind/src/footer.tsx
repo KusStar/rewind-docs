@@ -18,48 +18,48 @@ interface LinkProps {
 
 const NextLink = ({ route, title, isRTL }: LinkProps) => {
   return (
-    <Link href={route}>
-      <a
-        className={cn(
-          'text-base md:text-lg font-medium p-4 -m-4 no-underline transition-colors text-gray-600 dark:text-gray-300 dark:hover:text-primary-500 hover:text-primary-500 inline-flex items-center justify-end rounded',
-          { 'ml-2': !isRTL, 'mr-2': isRTL }
-        )}
-        title={title}
-      >
-        {title}
-        <ArrowRight
-          height={20}
-          className={cn('transform inline flex-shrink-0', {
-            'rotate-180 mr-1': isRTL,
-            'ml-1': !isRTL
-          })}
-        />
-      </a>
-    </Link>
-  )
+    (<Link
+      href={route}
+      className={cn(
+        'text-base md:text-lg font-medium p-4 -m-4 no-underline transition-colors text-gray-600 dark:text-gray-300 dark:hover:text-primary-500 hover:text-primary-500 inline-flex items-center justify-end rounded',
+        { 'ml-2': !isRTL, 'mr-2': isRTL }
+      )}
+      title={title}>
+
+      {title}
+      <ArrowRight
+        height={20}
+        className={cn('transform inline flex-shrink-0', {
+          'rotate-180 mr-1': isRTL,
+          'ml-1': !isRTL
+        })}
+      />
+
+    </Link>)
+  );
 }
 
 const PrevLink = ({ route, title, isRTL }: LinkProps) => {
   return (
-    <Link href={route}>
-      <a
-        className={cn(
-          'text-base md:text-lg font-medium p-4 -m-4 no-underline transition-colors text-gray-600 dark:text-gray-300 dark:hover:text-primary-500 hover:text-primary-500 flex items-center rounded',
-          { 'mr-2': !isRTL, 'ml-2': isRTL }
-        )}
-        title={title}
-      >
-        <ArrowRight
-          height={20}
-          className={cn('transform inline flex-shrink-0', {
-            'rotate-180 mr-1': !isRTL,
-            'ml-1': isRTL
-          })}
-        />
-        {title}
-      </a>
-    </Link>
-  )
+    (<Link
+      href={route}
+      className={cn(
+        'text-base md:text-lg font-medium p-4 -m-4 no-underline transition-colors text-gray-600 dark:text-gray-300 dark:hover:text-primary-500 hover:text-primary-500 flex items-center rounded',
+        { 'mr-2': !isRTL, 'ml-2': isRTL }
+      )}
+      title={title}>
+
+      <ArrowRight
+        height={20}
+        className={cn('transform inline flex-shrink-0', {
+          'rotate-180 mr-1': !isRTL,
+          'ml-1': isRTL
+        })}
+      />
+      {title}
+
+    </Link>)
+  );
 }
 
 interface NavLinkProps {

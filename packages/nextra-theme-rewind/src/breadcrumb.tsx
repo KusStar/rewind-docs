@@ -30,16 +30,16 @@ export default function Breadcrumb({ activePath }: { activePath: Item[] }) {
               )}
             >
               {isLink && !isActive ? (
-                <Link href={item.route}>
-                  <a className="text-current no-underline">{item.title}</a>
+                <Link href={item.route} className="text-current no-underline">
+                  {item.title}
                 </Link>
               ) : (
                 item.title
               )}
             </div>
           </React.Fragment>
-        )
+        );
       })}
     </div>
-  )
+  );
 }

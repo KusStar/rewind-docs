@@ -23,7 +23,7 @@
     "next": "^13.0.3",
     "nextra": "2.0.0-alpha.56",
     "nextra-theme-rewind": "workspace:*",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

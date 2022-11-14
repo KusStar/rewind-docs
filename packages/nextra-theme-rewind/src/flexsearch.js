@@ -26,33 +26,31 @@ const Item = ({
   onClick,
   excerpt
 }) => {
-  return (
-    <>
-      {first ? (
-        <div className="nextra-search-section mx-2.5 px-2.5 pb-1.5 mb-2 mt-6 first:mt-0 font-semibold uppercase text-xs text-gray-500 select-none dark:text-gray-300">
-          {page}
+  return <>
+    {first ? (
+      <div className="nextra-search-section mx-2.5 px-2.5 pb-1.5 mb-2 mt-6 first:mt-0 font-semibold uppercase text-xs text-gray-500 select-none dark:text-gray-300">
+        {page}
+      </div>
+    ) : null}
+    <Link
+      href={Router.basePath + href}
+      className="block no-underline"
+      onMouseMove={onHover}
+      onClick={onClick}>
+
+      <li className={cn({ active })}>
+        <div className="font-semibold dark:text-white leading-5">
+          {title}
         </div>
-      ) : null}
-      <Link href={Router.basePath + href}>
-        <a
-          className="block no-underline"
-          onMouseMove={onHover}
-          onClick={onClick}
-        >
-          <li className={cn({ active })}>
-            <div className="font-semibold dark:text-white leading-5">
-              {title}
-            </div>
-            {excerpt ? (
-              <div className="excerpt mt-1 text-gray-600 text-sm leading-[1.35rem] dark:text-gray-400">
-                {excerpt}
-              </div>
-            ) : null}
-          </li>
-        </a>
-      </Link>
-    </>
-  )
+        {excerpt ? (
+          <div className="excerpt mt-1 text-gray-600 text-sm leading-[1.35rem] dark:text-gray-400">
+            {excerpt}
+          </div>
+        ) : null}
+      </li>
+
+    </Link>
+  </>;
 }
 
 const MemoedStringWithMatchHighlights = memo(
