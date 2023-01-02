@@ -4,6 +4,7 @@ import '../styles/base.css'
 
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { Analytics } from '@vercel/analytics/react';
 
 import { useUrlHash } from '../utils/useUrlHash'
 
@@ -19,5 +20,10 @@ export default function Nextra({ Component, pageProps }) {
     }
   }, [hash])
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  );
 }

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/KusStar/rewind-docs#readme",
   "dependencies": {
+    "@vercel/analytics": "^0.1.6",
     "locomotive-scroll": "^4.1.4",
     "next": "^13.0.3",
     "nextra": "2.0.0-alpha.56",

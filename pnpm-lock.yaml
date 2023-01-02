@@ -73,6 +73,7 @@ importers:
 
   packages/rewind-docs:
     specifiers:
+      '@vercel/analytics': ^0.1.6
       locomotive-scroll: ^4.1.4
       next: ^13.0.3
       nextra: 2.0.0-alpha.56
@@ -80,6 +81,7 @@ importers:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
+      '@vercel/analytics': 0.1.6_react@18.2.0
       locomotive-scroll: 4.1.4
       next: 13.0.3_biqbaboplfbrettd7655fr4n2y
       nextra: 2.0.0-alpha.56_react@18.2.0
@@ -503,6 +505,14 @@ packages:
 
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
+
+  /@vercel/analytics/0.1.6_react@18.2.0:
+    resolution: {integrity: sha512-zNd5pj3iDvq8IMBQHa1YRcIteiw6ZiPB8AsONHd8ieFXlNpLqhXfIYnf4WvTfZ7S1NSJ++mIM14aJnNac/VMXQ==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /acorn-jsx/5.3.2_acorn@8.7.1:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
