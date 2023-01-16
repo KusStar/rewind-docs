@@ -26,5 +26,9 @@
     "nextra-theme-rewind": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.2"
   }
 }

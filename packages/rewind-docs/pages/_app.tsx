@@ -18,7 +18,7 @@ export default function Nextra({ Component, pageProps }) {
     if (hash && hash != '/') {
       router.push(hash)
     }
-  }, [hash])
+  }, [hash, router])
 
   return getLayout(
     <>

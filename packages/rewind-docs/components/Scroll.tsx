@@ -138,6 +138,7 @@ const Scroll = () => {
       }}
         data-scroll data-scroll-speed="2"
       >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={"https://s1.ax1x.com/2022/06/23/jCsakQ.png"}
           width="600px"
