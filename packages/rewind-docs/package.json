@@ -21,7 +21,7 @@
   "dependencies": {
     "@vercel/analytics": "^0.1.6",
     "locomotive-scroll": "^4.1.4",
-    "next": "^13.0.3",
+    "next": "^13.1.2",
     "nextra": "2.0.0-alpha.56",
     "nextra-theme-rewind": "workspace:*",
     "react": "^18.2.0",

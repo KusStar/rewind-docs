@@ -18,6 +18,9 @@
     },
     "dev": {
       "cache": false
+    },
+    "rewind-docs#build": {
+      "dependsOn": ["nextra-theme-rewind#build"]
     }
   }
 }

@@ -61,10 +61,13 @@
   },
   "devDependencies": {
     "@types/flexsearch": "^0.7.2",
+    "@types/node": "^18.11.18",
     "@types/react": "^17.0.39",
     "autoprefixer": "^10.2.6",
+    "concurrently": "^7.6.0",
     "cross-env": "^7.0.2",
     "cssnano": "^5.1.11",
+    "esbuild": "^0.17.1",
     "nextra": "2.0.0-alpha.56",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
