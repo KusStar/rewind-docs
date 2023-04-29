@@ -7,13 +7,15 @@
   "thanks": "鸣谢",
   "index": {
     "title": "倒带",
-    "type": "page",
-    "hidden": true,
+    "display": "hidden",
     "theme": {
-      "gitTimestamp": false,
+      "layout": "raw",
       "navbar": false,
+      "breadcrumb": false,
+      "footer": false,
+      "sidebar": false,
       "toc": false,
-      "layout": "full"
+      "pagination": false
     }
   }
 }

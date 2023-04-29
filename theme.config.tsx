@@ -1,4 +1,5 @@
-import type { DocsThemeConfig} from 'nextra-theme-docs';
+import { useRouter } from 'next/router';
+import type { DocsThemeConfig } from 'nextra-theme-docs';
 
 const Logo = ({ size, ...props }) => (
   <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -29,8 +30,11 @@ const config: DocsThemeConfig =  {
   },
   docsRepositoryBase: 'https://github.com/kusstar/rewind-docs/blob/master', // base URL for the docs repository
   useNextSeoProps() {
-    return {
-      titleTemplate: '%s – 倒带'
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+       titleTemplate: '%s – 倒带'
+      }
     }
   },
   toc: {
@@ -40,15 +44,21 @@ const config: DocsThemeConfig =  {
     prev: true,
     next: true,
   },
+  feedback: {
+    content: null
+  },
   darkMode: true,
   nextThemes: {
     defaultTheme: 'system',
   },
   editLink: {
-    text: false,
+    text: "在 GitHub 上编辑此页",
   },
   search: {
     placeholder: '搜索……',
+  },
+  footer: {
+    text: null
   },
   logo: (
     <>
@@ -67,3 +77,5 @@ const config: DocsThemeConfig =  {
     </>
   ),
 }
+
+export default config
