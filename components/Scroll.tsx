@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { Landing } from "nextra-theme-rewind";
+import Landing from "./Landing";
 
 const covers = {
   inRainbows: 'https://s1.ax1x.com/2022/06/23/jC89mt.jpg',

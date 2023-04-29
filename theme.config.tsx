@@ -1,3 +1,5 @@
+import type { DocsThemeConfig} from 'nextra-theme-docs';
+
 const Logo = ({ size, ...props }) => (
   <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" {...props}>
     <g
@@ -21,21 +23,33 @@ const Logo = ({ size, ...props }) => (
 );
 
 // theme.config.js
-export default {
-  projectLink: 'https://github.com/kusstar/rewind-docs', // GitHub link in the navbar
+const config: DocsThemeConfig =  {
+  project: {
+    link: 'https://github.com/kusstar/rewind-docs', // GitHub link in the navbar
+  },
   docsRepositoryBase: 'https://github.com/kusstar/rewind-docs/blob/master', // base URL for the docs repository
-  titleSuffix: ' – 倒带',
-  floatTOC: true,
-  nextLinks: true,
-  prevLinks: true,
-  search: true,
-  unstable_flexsearch: true,
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – 倒带'
+    }
+  },
+  toc: {
+    float: true,
+  },
+  navigation: {
+    prev: true,
+    next: true,
+  },
   darkMode: true,
   nextThemes: {
     defaultTheme: 'system',
   },
-  footerEditLink: false,
-  searchPlaceholder: '搜索……',
+  editLink: {
+    text: false,
+  },
+  search: {
+    placeholder: '搜索……',
+  },
   logo: (
     <>
       <Logo size={32} style={{
