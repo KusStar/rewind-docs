@@ -78,7 +78,11 @@ const Scroll = () => {
             onClick: (router) => router.push("/home"),
           },
         ]}
-        coverImgUrl={"https://s1.ax1x.com/2022/06/23/jCsakQ.png"}
+        onScrollDown={() => {
+          locoScrollRef.current.scrollTo(scrollRef.current, {
+            offset: window.innerHeight - 32
+          })
+        }}
       />
       <section className="tiles tiles--rotated" id="grid2">
         <div className="tiles__wrap">

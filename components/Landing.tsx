@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 import { useRouter, NextRouter } from "next/router";
 import cn from 'clsx'
+import { ChevronsDown } from 'react-feather';
+import { motion } from 'framer-motion'
 
 interface Button {
   content: React.ReactNode;
@@ -13,7 +15,7 @@ interface Props {
   subtitle: string
   keywords?: string[]
   buttons?: Button[]
-  coverImgUrl?: string
+  onScrollDown?: () => void
 }
 
 const BTN_BASE = [
@@ -30,22 +32,17 @@ const BTN_GHOST = [
   'dark:border dark:opacity-40 dark:hover:opacity-100',
 ]
 
-const squareVariants = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-  hidden: { opacity: 0, scale: 0 }
-};
-
 const Landing: FC<Props> = ({
   buttons,
   title,
   subtitle,
   keywords,
-  coverImgUrl
+  onScrollDown
 }) => {
   const router = useRouter();
 
   return (
-    <div className='h-screen w-screen flex flex-col items-center justify-center'>
+    <div className='h-screen w-screen flex flex-col items-center justify-center relative'>
       <div className='mb-8 text-center'>
         <div className='text-4xl font-bold mb-6' >{title}</div>
         <div className='text-xl mb-6'>{subtitle}</div>
@@ -73,6 +70,20 @@ const Landing: FC<Props> = ({
           ))}
         </div>
       )}
+      <motion.div
+        className='absolute bottom-12 cursor-pointer active:scale-105'
+        initial={{ translateY: -18 }}
+        animate={{ translateY: 18 }}
+        transition={{
+          ease: 'easeInOut',
+          repeat: Infinity,
+          repeatType: "reverse",
+          duration: 1.5,
+        }}
+        onClick={onScrollDown}
+      >
+        <ChevronsDown size={36} />
+      </motion.div>
     </div>
   );
 }

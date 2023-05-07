@@ -20,13 +20,15 @@
   "homepage": "https://github.com/KusStar/rewind-docs#readme",
   "dependencies": {
     "clsx": "^1.1.1",
+    "framer-motion": "^10.12.8",
     "locomotive-scroll": "^4.1.4",
-    "next": "13.3.0",
+    "next": "13.4.1",
     "nextjs-google-analytics": "^2.3.3",
-    "nextra": "2.4.2",
-    "nextra-theme-docs": "2.4.2",
+    "nextra": "2.5.0",
+    "nextra-theme-docs": "2.5.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10"
   },
   "devDependencies": {
     "@types/node": "18.16.3",
