@@ -1,8 +1,8 @@
-# 垃圾应用主页
+# 倒带 App 官网
 
-给垃圾应用准备的垃圾主页，充当官网。
+<https://rewind.uselessthing.top/>
 
-## Thanks
+## Thanks/Deps
 
 - [**nextra**](https://github.com/shuding/nextra/tree/core)
 
@@ -16,14 +16,10 @@
 
   Develop. Preview. Ship.
 
-- [**nextra-theme-rewind**](https://github.com/KusStar/rewind-docs/tree/master/packages/nextra-theme-rewind)
-
-  Nextra theme, built for https://rewindapp.vercel.app/
-
 - [**codrops/TileScroll**](https://github.com/codrops/TileScroll)
 
   Scroll animations for image grids using Locomotive Scroll
 
 ## License
 
-* [MIT](LICENSE)
+- [MIT](LICENSE)
