@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
@@ -22,7 +22,7 @@
     "clsx": "^1.1.1",
     "framer-motion": "^10.12.8",
     "locomotive-scroll": "^4.1.4",
-    "next": "13.4.1",
+    "next": "13.4.2",
     "nextjs-google-analytics": "^2.3.3",
     "nextra": "2.5.0",
     "nextra-theme-docs": "2.5.0",
@@ -34,7 +34,7 @@
     "@types/node": "18.16.3",
     "autoprefixer": "^10.4.7",
     "eslint": "8.32.0",
-    "eslint-config-next": "13.1.2",
+    "eslint-config-next": "13.4.2",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.2",
     "typescript": "^5.0.4"
