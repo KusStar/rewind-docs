@@ -1,8 +1,6 @@
 import React, { FC } from 'react'
 import { useRouter, NextRouter } from "next/router";
 import cn from 'clsx'
-import { ChevronsDown } from 'react-feather';
-import { motion } from 'framer-motion'
 
 interface Button {
   content: React.ReactNode;
@@ -15,7 +13,7 @@ interface Props {
   subtitle: string
   keywords?: string[]
   buttons?: Button[]
-  onScrollDown?: () => void
+  scrollBtn?: React.ReactNode
 }
 
 const BTN_BASE = [
@@ -37,7 +35,7 @@ const Landing: FC<Props> = ({
   title,
   subtitle,
   keywords,
-  onScrollDown
+  scrollBtn
 }) => {
   const router = useRouter();
 
@@ -70,20 +68,7 @@ const Landing: FC<Props> = ({
           ))}
         </div>
       )}
-      <motion.div
-        className='absolute bottom-12 cursor-pointer active:scale-105'
-        initial={{ translateY: -18 }}
-        animate={{ translateY: 18 }}
-        transition={{
-          ease: 'easeInOut',
-          repeat: Infinity,
-          repeatType: "reverse",
-          duration: 1.5,
-        }}
-        onClick={onScrollDown}
-      >
-        <ChevronsDown size={36} />
-      </motion.div>
+      {scrollBtn}
     </div>
   );
 }

@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import Landing from "./Landing";
+import { ChevronsDown } from 'react-feather';
+import { motion } from 'framer-motion'
+import usePreload from '../utils/usePreload';
 
 const covers = {
   inRainbows: 'https://s1.ax1x.com/2022/06/23/jC89mt.jpg',
@@ -25,31 +28,39 @@ const covers = {
   awakeMyLove: 'https://s1.ax1x.com/2022/06/22/j9R8xA.jpg',
 }
 
+const coverUrls = Object.values(covers)
+
 const Scroll = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const locoScrollRef = useRef<any>(null)
+  const preloaded = usePreload(coverUrls)
 
   useEffect(() => {
-    if (scrollRef.current) {
-      import('locomotive-scroll').then(({ default: LocomotiveScroll }) => {
-        locoScrollRef.current = new LocomotiveScroll({
-          el: scrollRef.current,
-          smooth: true,
-          mobile: {
-            breakpoint: 0,
+    if (preloaded) {
+      if (scrollRef.current) {
+        import('locomotive-scroll').then(({ default: LocomotiveScroll }) => {
+          locoScrollRef.current = new LocomotiveScroll({
+            el: scrollRef.current,
             smooth: true,
-            inertia: 0.8,
-            getDirection: true,
-          },
-          tablet: {
-            breakpoint: 0,
-            smooth: true,
-            inertia: 0.8,
-            getDirection: true,
-          }
-        });
-      })
+            mobile: {
+              breakpoint: 0,
+              smooth: true,
+              inertia: 0.8,
+              getDirection: true,
+            },
+            tablet: {
+              breakpoint: 0,
+              smooth: true,
+              inertia: 0.8,
+              getDirection: true,
+            }
+          });
+        })
+      }
     }
+  }, [preloaded])
+
+  useEffect(() => {
     return () => {
       if (locoScrollRef.current) {
         locoScrollRef.current.destroy();
@@ -58,6 +69,7 @@ const Scroll = () => {
   }, [])
 
   const toTop = () => {
+    if (!locoScrollRef.current) return
     locoScrollRef.current.scrollTo(scrollRef.current)
   }
 
@@ -78,12 +90,29 @@ const Scroll = () => {
             onClick: (router) => router.push("/home"),
           },
         ]}
-        onScrollDown={() => {
-          locoScrollRef.current.scrollTo(scrollRef.current, {
-            offset: window.innerHeight - 32
-          })
-        }}
+        scrollBtn={
+          preloaded &&
+          <motion.div
+            className='absolute bottom-12 cursor-pointer active:scale-105'
+            initial={{ translateY: -18 }}
+            animate={{ translateY: 18 }}
+            transition={{
+              ease: 'easeInOut',
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 1.5,
+            }}
+            onClick={() => {
+              locoScrollRef.current.scrollTo(scrollRef.current, {
+                offset: window.innerHeight - 32
+              })
+            }}
+          >
+            <ChevronsDown size={36} />
+          </motion.div>
+        }
       />
+
       <section className="tiles tiles--rotated" id="grid2">
         <div className="tiles__wrap">
           <div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
