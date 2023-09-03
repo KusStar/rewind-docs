@@ -5,7 +5,7 @@ import cn from 'clsx'
 interface Button {
   content: React.ReactNode;
   type?: 'default' | 'ghost';
-  onClick: (router: NextRouter) => void
+  onClick: () => void
 }
 
 interface Props {
@@ -37,7 +37,6 @@ const Landing: FC<Props> = ({
   keywords,
   scrollBtn
 }) => {
-  const router = useRouter();
 
   return (
     <div className='h-screen w-screen flex flex-col items-center justify-center relative'>
@@ -57,7 +56,7 @@ const Landing: FC<Props> = ({
           {buttons.map((btn, i) => (
             <button
               key={i}
-              onClick={() => btn.onClick(router)}
+              onClick={() => btn.onClick()}
               className={cn(
                 ...BTN_BASE,
                 ...(btn.type === 'ghost' ? BTN_GHOST : BTN_DEFAULT)

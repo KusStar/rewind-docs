@@ -3,6 +3,7 @@ import Landing from "./Landing";
 import { ChevronsDown } from 'react-feather';
 import { motion } from 'framer-motion'
 import usePreload from '../utils/usePreload';
+import useViewTransitionRouter from '../utils/useTransitionRouter';
 
 const covers = {
   inRainbows: 'https://s1.ax1x.com/2022/06/23/jC89mt.jpg',
@@ -34,6 +35,7 @@ const Scroll = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const locoScrollRef = useRef<any>(null)
   const preloaded = usePreload(coverUrls)
+  const router = useViewTransitionRouter();
 
   useEffect(() => {
     if (preloaded) {
@@ -82,12 +84,12 @@ const Scroll = () => {
         buttons={[
           {
             content: "下载",
-            onClick: (router) => router.push("/download"),
+            onClick: () => router.push("/download"),
           },
           {
             content: "更多",
             type: "ghost",
-            onClick: (router) => router.push("/home"),
+            onClick: () => router.push("/home"),
           },
         ]}
         scrollBtn={
