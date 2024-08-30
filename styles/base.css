@@ -69,6 +69,8 @@ SOFTWARE.
 	margin: var(--tile-margin);
 	background-size: cover;
 	background-position: 50% 50%;
+	border: 2px solid;
+	border-radius: 8px;
 }
 
 .tiles--rotated .tiles__line-img {
