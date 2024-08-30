@@ -23,7 +23,6 @@
     "framer-motion": "^10.12.8",
     "locomotive-scroll": "^4.1.4",
     "next": "13.4.19",
-    "nextjs-google-analytics": "^2.3.3",
     "nextra": "2.12.3",
     "nextra-theme-docs": "2.7.1",
     "react": "^18.2.0",
