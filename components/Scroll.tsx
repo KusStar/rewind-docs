@@ -2,65 +2,59 @@ import React, { useEffect, useRef } from 'react'
 import Landing from "./Landing";
 import { ChevronsDown } from 'react-feather';
 import { motion } from 'framer-motion'
-import usePreload from '../utils/usePreload';
 import useViewTransitionRouter from '../utils/useTransitionRouter';
 
 const covers = {
-  inRainbows: 'https://s1.ax1x.com/2022/06/23/jC89mt.jpg',
-  forEmma: 'https://s1.ax1x.com/2022/06/23/jC3z6A.jpg',
-  twinFantasy: 'https://s1.ax1x.com/2022/06/23/jC8PTf.jpg',
-  care: 'https://s1.ax1x.com/2022/06/22/j9RuVK.jpg',
-  artAngles: 'https://s1.ax1x.com/2022/06/22/j9Rmb6.jpg',
-  melodrama: 'https://s1.ax1x.com/2022/06/22/j9R18H.jpg',
-  ballads1: 'https://s1.ax1x.com/2022/06/22/j9RM5D.jpg',
-  myBeautifulDarkTwistedFantasy: 'https://s1.ax1x.com/2022/06/22/j9RA29.jpg',
-  igor: 'https://s1.ax1x.com/2022/06/22/j9R32d.jpg',
-  gsgMixtape: 'https://s1.ax1x.com/2022/06/22/j9RJKI.jpg',
-  nostalgiaUltra: 'https://s1.ax1x.com/2022/06/22/j9RZK1.jpg',
-  moonRiver: 'https://s1.ax1x.com/2022/06/22/j9RlPe.jpg',
-  blonde: 'https://s1.ax1x.com/2022/06/23/jC8SOI.jpg',
-  carrieAndLowell: 'https://s1.ax1x.com/2022/06/23/jC8Fk8.jpg',
-  lustForLife: 'https://s1.ax1x.com/2022/06/23/jC8C0P.jpg',
-  kidA: 'https://s1.ax1x.com/2022/06/23/jCap8K.jpg',
-  bloom: 'https://s1.ax1x.com/2022/06/22/j9REvR.jpg',
-  channelOrange: 'https://s1.ax1x.com/2022/06/22/j9RFC4.jpg',
-  ctrl: 'https://s1.ax1x.com/2022/06/22/j9RKUO.jpg',
-  funeral: 'https://s1.ax1x.com/2022/06/22/j9ReDx.jpg',
-  awakeMyLove: 'https://s1.ax1x.com/2022/06/22/j9R8xA.jpg',
+  inRainbows: '/covers/inRainbows.webp',
+  forEmma: '/covers/forEmma.webp',
+  twinFantasy: '/covers/twinFantasy.webp',
+  care: '/covers/care.webp',
+  artAngles: '/covers/artAngles.webp',
+  melodrama: '/covers/melodrama.webp',
+  ballads1: '/covers/ballads1.webp',
+  myBeautifulDarkTwistedFantasy: '/covers/myBeautifulDarkTwistedFantasy.webp',
+  igor: '/covers/igor.webp',
+  gsgMixtape: '/covers/gsgMixtape.webp',
+  nostalgiaUltra: '/covers/nostalgiaUltra.webp',
+  moonRiver: '/covers/moonRiver.webp',
+  blonde: '/covers/blonde.webp',
+  carrieAndLowell: '/covers/carrieAndLowell.webp',
+  lustForLife: '/covers/lustForLife.webp',
+  kidA: '/covers/kidA.webp',
+  bloom: '/covers/bloom.webp',
+  channelOrange: '/covers/channelOrange.webp',
+  ctrl: '/covers/ctrl.webp',
+  funeral: '/covers/funeral.webp',
+  awakeMyLove: '/covers/awakeMyLove.webp'
 }
-
-const coverUrls = Object.values(covers)
 
 const Scroll = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const locoScrollRef = useRef<any>(null)
-  const preloaded = usePreload(coverUrls)
   const router = useViewTransitionRouter();
 
   useEffect(() => {
-    if (preloaded) {
-      if (scrollRef.current) {
-        import('locomotive-scroll').then(({ default: LocomotiveScroll }) => {
-          locoScrollRef.current = new LocomotiveScroll({
-            el: scrollRef.current,
+    if (scrollRef.current) {
+      import('locomotive-scroll').then(({ default: LocomotiveScroll }) => {
+        locoScrollRef.current = new LocomotiveScroll({
+          el: scrollRef.current,
+          smooth: true,
+          mobile: {
+            breakpoint: 0,
             smooth: true,
-            mobile: {
-              breakpoint: 0,
-              smooth: true,
-              inertia: 0.8,
-              getDirection: true,
-            },
-            tablet: {
-              breakpoint: 0,
-              smooth: true,
-              inertia: 0.8,
-              getDirection: true,
-            }
-          });
-        })
-      }
+            inertia: 0.8,
+            getDirection: true,
+          },
+          tablet: {
+            breakpoint: 0,
+            smooth: true,
+            inertia: 0.8,
+            getDirection: true,
+          }
+        });
+      })
     }
-  }, [preloaded])
+  }, [])
 
   useEffect(() => {
     return () => {
@@ -93,7 +87,6 @@ const Scroll = () => {
           },
         ]}
         scrollBtn={
-          preloaded &&
           <motion.div
             className='absolute bottom-12 cursor-pointer active:scale-105'
             initial={{ translateY: -18 }}
