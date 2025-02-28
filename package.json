@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/KusStar/rewind-docs#readme",
   "dependencies": {
+    "blurhash": "^2.0.5",
+    "blurhash-base64": "^0.0.3",
     "clsx": "^1.1.1",
     "framer-motion": "^10.12.8",
     "locomotive-scroll": "^4.1.4",
@@ -35,7 +37,9 @@
     "eslint": "8.32.0",
     "eslint-config-next": "13.4.2",
     "postcss": "^8.4.14",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.1.2",
-    "typescript": "^5.0.4"
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
   }
 }

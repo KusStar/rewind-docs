@@ -1,31 +1,25 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Landing from "./Landing";
 import { ChevronsDown } from 'react-feather';
 import { motion } from 'framer-motion'
 import useViewTransitionRouter from '../utils/useTransitionRouter';
+import { COVERS } from '../utils/covers';
+import BLURHASH_COVERS from '../utils/blurhash-covers.json';
+import { blurhashToBase64 } from "blurhash-base64";
 
-const covers = {
-  inRainbows: '/covers/inRainbows.webp',
-  forEmma: '/covers/forEmma.webp',
-  twinFantasy: '/covers/twinFantasy.webp',
-  care: '/covers/care.webp',
-  artAngles: '/covers/artAngles.webp',
-  melodrama: '/covers/melodrama.webp',
-  ballads1: '/covers/ballads1.webp',
-  myBeautifulDarkTwistedFantasy: '/covers/myBeautifulDarkTwistedFantasy.webp',
-  igor: '/covers/igor.webp',
-  gsgMixtape: '/covers/gsgMixtape.webp',
-  nostalgiaUltra: '/covers/nostalgiaUltra.webp',
-  moonRiver: '/covers/moonRiver.webp',
-  blonde: '/covers/blonde.webp',
-  carrieAndLowell: '/covers/carrieAndLowell.webp',
-  lustForLife: '/covers/lustForLife.webp',
-  kidA: '/covers/kidA.webp',
-  bloom: '/covers/bloom.webp',
-  channelOrange: '/covers/channelOrange.webp',
-  ctrl: '/covers/ctrl.webp',
-  funeral: '/covers/funeral.webp',
-  awakeMyLove: '/covers/awakeMyLove.webp'
+const Img = ({ imgKey }: { imgKey: keyof typeof COVERS }) => {
+  const [imageSrc, setImageSrc] = useState<string>(() =>
+    blurhashToBase64(BLURHASH_COVERS[imgKey]));
+  useEffect(() => {
+    const img = new Image();
+    img.src = COVERS[imgKey];
+    img.onload = () => {
+      setImageSrc(COVERS[imgKey]);
+    };
+  }, [imgKey])
+  return (
+    <div className="tiles__line-img" style={{ backgroundImage: `url(${imageSrc})` }}></div>
+  )
 }
 
 const Scroll = () => {
@@ -114,48 +108,48 @@ const Scroll = () => {
             <div className="tiles__line-img"></div>
             <div className="tiles__line-img"></div>
             <div className="tiles__line-img"></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.inRainbows})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.forEmma})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.twinFantasy})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.care})` }}></div>
+            <Img imgKey="inRainbows" />
+            <Img imgKey="forEmma" />
+            <Img imgKey="twinFantasy" />
+            <Img imgKey="care" />
           </div>
           <div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
             <div className="tiles__line-img"></div>
             <div className="tiles__line-img"></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.care})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.artAngles})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.melodrama})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.ballads1})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.myBeautifulDarkTwistedFantasy})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.care})` }}></div>
+            <Img imgKey="care" />
+            <Img imgKey="artAngles" />
+            <Img imgKey="melodrama" />
+            <Img imgKey="ballads1" />
+            <Img imgKey="myBeautifulDarkTwistedFantasy" />
+            <Img imgKey="care" />
           </div>
           <div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.igor})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.gsgMixtape})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.nostalgiaUltra})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.moonRiver})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.blonde})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.carrieAndLowell})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.lustForLife})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.igor})` }}></div>
+            <Img imgKey="igor" />
+            <Img imgKey="gsgMixtape" />
+            <Img imgKey="nostalgiaUltra" /> 
+            <Img imgKey="moonRiver" />
+            <Img imgKey="blonde" />
+            <Img imgKey="carrieAndLowell" />
+            <Img imgKey="lustForLife" />
+            <Img imgKey="igor" />
           </div>
           <div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
             <div className="tiles__line-img"></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.kidA})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.funeral})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.awakeMyLove})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.inRainbows})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.bloom})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.channelOrange})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.kidA})` }}></div>
+            <Img imgKey="kidA" />
+            <Img imgKey="funeral" />
+            <Img imgKey="awakeMyLove" />
+            <Img imgKey="inRainbows" />
+            <Img imgKey="bloom" />
+            <Img imgKey="channelOrange" />
+            <Img imgKey="kidA" />
           </div>
           <div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.channelOrange})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.artAngles})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.ctrl})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.care})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.kidA})` }}></div>
-            <div className="tiles__line-img" style={{ backgroundImage: `url(${covers.channelOrange})` }}></div>
+            <Img imgKey="channelOrange" />
+            <Img imgKey="artAngles" />
+            <Img imgKey="ctrl" />
+            <Img imgKey="care" />
+            <Img imgKey="kidA" /> 
+            <Img imgKey="channelOrange" />
           </div>
         </div>
       </section>
