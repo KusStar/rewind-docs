@@ -6,6 +6,7 @@ import useViewTransitionRouter from '../utils/useTransitionRouter';
 import { COVERS } from '../utils/covers';
 import BLURHASH_COVERS from '../utils/blurhash-covers.json';
 import { blurhashToBase64 } from "blurhash-base64";
+import clsx from 'clsx';
 
 const Img = ({ imgKey }: { imgKey: keyof typeof COVERS }) => {
   const [imageSrc, setImageSrc] = useState<string>(() =>
@@ -18,7 +19,7 @@ const Img = ({ imgKey }: { imgKey: keyof typeof COVERS }) => {
     };
   }, [imgKey])
   return (
-    <div className="tiles__line-img" style={{ backgroundImage: `url(${imageSrc})` }}></div>
+    <div className={clsx("tiles__line-img", "hover:scale-105 hover:shadow-lg hover:cursor-crosshair")} style={{ backgroundImage: `url(${imageSrc})` }}></div>
   )
 }
 
@@ -126,7 +127,7 @@ const Scroll = () => {
           <div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
             <Img imgKey="igor" />
             <Img imgKey="gsgMixtape" />
-            <Img imgKey="nostalgiaUltra" /> 
+            <Img imgKey="nostalgiaUltra" />
             <Img imgKey="moonRiver" />
             <Img imgKey="blonde" />
             <Img imgKey="carrieAndLowell" />
@@ -148,7 +149,7 @@ const Scroll = () => {
             <Img imgKey="artAngles" />
             <Img imgKey="ctrl" />
             <Img imgKey="care" />
-            <Img imgKey="kidA" /> 
+            <Img imgKey="kidA" />
             <Img imgKey="channelOrange" />
           </div>
         </div>

@@ -71,7 +71,7 @@ SOFTWARE.
 	background-position: 50% 50%;
 	border: 2px solid;
 	border-radius: 8px;
-	transition: background-image 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out,background-image 0.2s ease-in-out,box-shadow 0.2s ease-in-out;
 }
 
 .tiles--rotated .tiles__line-img {
