@@ -162,7 +162,7 @@ const Scroll = () => {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={"https://s1.ax1x.com/2022/06/23/jCsakQ.png"}
+          src={"/showcase.webp"}
           width="600px"
           alt="封面"
         />

@@ -8,19 +8,16 @@ async function encodeImageToBlurhash(filePath: string): Promise<string> {
   // Load and process the image using sharp
   const image = sharp(filePath);
 
-  // Resize the image to a smaller size for faster processing
-  const resizedImage = await image.resize(32, 32).ensureAlpha().raw().toBuffer();
-
   // Get image metadata (width and height)
   const metadata = await image.metadata();
 
   // Encode the image to BlurHash
   const blurhashString = encode(
-    new Uint8ClampedArray(resizedImage),
-    32,
-    32,
+    new Uint8ClampedArray(await image.ensureAlpha().raw().toBuffer()),
+    metadata.width,
+    metadata.height,
     4, // x-components
-    3  // y-components
+    4  // y-components
   );
 
   return blurhashString;
