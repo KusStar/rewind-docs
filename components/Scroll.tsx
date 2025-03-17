@@ -121,12 +121,12 @@ const Scroll = () => {
             <Img imgKey="artAngles" />
             <Img imgKey="melodrama" />
             <Img imgKey="ballads1" />
-            <Img imgKey="myBeautifulDarkTwistedFantasy" />
+            <Img imgKey="brat" />
             <Img imgKey="care" />
           </div>
           <div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
             <Img imgKey="igor" />
-            <Img imgKey="gsgMixtape" />
+            <Img imgKey="legend" />
             <Img imgKey="nostalgiaUltra" />
             <Img imgKey="moonRiver" />
             <Img imgKey="blonde" />
@@ -136,20 +136,20 @@ const Scroll = () => {
           </div>
           <div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
             <div className="tiles__line-img"></div>
-            <Img imgKey="kidA" />
+            <Img imgKey="episode2" />
             <Img imgKey="funeral" />
             <Img imgKey="awakeMyLove" />
             <Img imgKey="inRainbows" />
             <Img imgKey="bloom" />
             <Img imgKey="channelOrange" />
-            <Img imgKey="kidA" />
+            <Img imgKey="episode2" />
           </div>
           <div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
             <Img imgKey="channelOrange" />
             <Img imgKey="artAngles" />
             <Img imgKey="ctrl" />
             <Img imgKey="care" />
-            <Img imgKey="kidA" />
+            <Img imgKey="episode2" />
             <Img imgKey="channelOrange" />
           </div>
         </div>
