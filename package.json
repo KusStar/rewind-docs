@@ -25,7 +25,7 @@
     "clsx": "^1.1.1",
     "framer-motion": "^10.12.8",
     "locomotive-scroll": "^4.1.4",
-    "next": "13.4.19",
+    "next": "13.5.9",
     "nextra": "2.12.3",
     "nextra-theme-docs": "2.7.1",
     "react": "^18.2.0",
